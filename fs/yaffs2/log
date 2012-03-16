@@ -1,0 +1,96 @@
+arch/arm/kernel/return_address.c:62:2: warning: #warning "TODO: return_address should use unwind tables"
+arch/arm/mach-tegra/common.c: In function 'tegra_init_cache':
+arch/arm/mach-tegra/common.c:274: warning: unused variable 'speedo'
+arch/arm/mach-tegra/common-t2.c:192: warning: initialization from incompatible pointer type
+arch/arm/mach-tegra/usb_phy.c: In function 'utmi_phy_postresume':
+arch/arm/mach-tegra/usb_phy.c:1539: warning: unused variable 'inst'
+arch/arm/mach-tegra/usb_phy.c:1538: warning: unused variable 'pmc_base'
+arch/arm/mach-tegra/iovmm-gart.c:89: warning: initialization from incompatible pointer type
+arch/arm/mach-tegra/board-shuttle-gpu.c: In function 'shuttle_panel_early_suspend':
+arch/arm/mach-tegra/board-shuttle-gpu.c:514: warning: passing argument 1 of 'cpufreq_set_conservative_governor_param' makes pointer from integer without a cast
+arch/arm/mach-tegra/board.h:118: note: expected 'char *' but argument is of type 'int'
+fs/yaffs2/yaffs_vfs.c:907: warning: initialization from incompatible pointer type
+fs/yaffs2/yaffs_vfs.c:939: warning: initialization from incompatible pointer type
+drivers/cpufreq/cpufreq.c: In function '__cpufreq_set_policy':
+drivers/cpufreq/cpufreq.c:1638: warning: comparison of distinct pointer types lacks a cast
+drivers/cpufreq/cpufreq.c:1639: warning: comparison of distinct pointer types lacks a cast
+drivers/cpuidle/governors/menu.c:128: warning: 'get_loadavg' defined but not used
+In file included from drivers/mmc/card/block.c:41:
+include/linux/mmc/mmc.h:157:1: warning: "R1_STATE_PRG" redefined
+include/linux/mmc/mmc.h:151:1: warning: this is the location of the previous definition
+In file included from drivers/mmc/core/core.c:32:
+include/linux/mmc/mmc.h:157:1: warning: "R1_STATE_PRG" redefined
+include/linux/mmc/mmc.h:151:1: warning: this is the location of the previous definition
+In file included from drivers/mmc/core/mmc.c:19:
+include/linux/mmc/mmc.h:157:1: warning: "R1_STATE_PRG" redefined
+include/linux/mmc/mmc.h:151:1: warning: this is the location of the previous definition
+In file included from drivers/mmc/core/mmc_ops.c:18:
+include/linux/mmc/mmc.h:157:1: warning: "R1_STATE_PRG" redefined
+include/linux/mmc/mmc.h:151:1: warning: this is the location of the previous definition
+In file included from drivers/mmc/core/sd.c:18:
+include/linux/mmc/mmc.h:157:1: warning: "R1_STATE_PRG" redefined
+include/linux/mmc/mmc.h:151:1: warning: this is the location of the previous definition
+In file included from drivers/mmc/core/sd_ops.c:18:
+include/linux/mmc/mmc.h:157:1: warning: "R1_STATE_PRG" redefined
+include/linux/mmc/mmc.h:151:1: warning: this is the location of the previous definition
+In file included from drivers/mmc/core/sdio_ops.c:16:
+include/linux/mmc/mmc.h:157:1: warning: "R1_STATE_PRG" redefined
+include/linux/mmc/mmc.h:151:1: warning: this is the location of the previous definition
+In file included from drivers/mmc/host/sdhci.c:26:
+include/linux/mmc/mmc.h:157:1: warning: "R1_STATE_PRG" redefined
+include/linux/mmc/mmc.h:151:1: warning: this is the location of the previous definition
+drivers/mmc/host/sdhci.c: In function 'sdhci_set_ios':
+drivers/mmc/host/sdhci.c:1352: warning: unused variable 'clock'
+drivers/mmc/host/sdhci-tegra.c:368: warning: 'tegra_3x_sdhci_set_card_clock' defined but not used
+drivers/mmc/host/sdhci-tegra.c:169: warning: 'tegra3_sdhci_post_reset_init' defined but not used
+drivers/net/usb/cdc_subset.c:229:2: warning: #warning You need to configure some hardware for this driver
+drivers/staging/vt6656/main_usb.c: In function 'device_ioctl':
+drivers/staging/vt6656/main_usb.c:2072: warning: the frame size of 1288 bytes is larger than 1024 bytes; see http://go/big_stack_frame
+drivers/staging/vt6656/iwctl.c: In function 'iwctl_giwaplist':
+drivers/staging/vt6656/iwctl.c:787: warning: the frame size of 1296 bytes is larger than 1024 bytes; see http://go/big_stack_frame
+drivers/tty/serial/tegra_hsuart.c: In function 'tegra_uart_hw_deinit':
+drivers/tty/serial/tegra_hsuart.c:653: warning: comparison of distinct pointer types lacks a cast
+drivers/tty/serial/tegra_hsuart.c:631: warning: unused variable 'retry'
+drivers/tty/serial/tegra_hsuart.c: In function 'tegra_uart_init_rx_dma':
+drivers/tty/serial/tegra_hsuart.c:833: warning: unused variable 'rx_dma_phys'
+drivers/usb/class/cdc-acm.c: In function 'acm_resume':
+drivers/usb/class/cdc-acm.c:1384: warning: unused variable 'wb'
+In file included from drivers/usb/host/ehci-hcd.c:124:
+drivers/usb/host/ehci.h:766: warning: function declaration isn't a prototype
+In file included from drivers/usb/host/ehci-hcd.c:1312:
+drivers/usb/host/ehci-tegra.c: In function 'tegra_usb_resume':
+drivers/usb/host/ehci-tegra.c:556: warning: unused variable 'udev'
+drivers/usb/otg/otg_id.c: In function '__otg_id_notify':
+drivers/usb/otg/otg_id.c:64: warning: 'ret' may be used uninitialized in this function
+In file included from drivers/video/tegra/dc/dc.c:48:
+arch/arm/mach-tegra/include/mach/latency_allowance.h: In function 'tegra_disable_latency_scaling':
+arch/arm/mach-tegra/include/mach/latency_allowance.h:107: warning: 'return' with a value, in function returning void
+drivers/video/tegra/dc/hdmi.c: In function 'tegra_dc_hdmi_init':
+drivers/video/tegra/dc/hdmi.c:1064: warning: ignoring return value of 'device_create_file', declared with attribute warn_unused_result
+drivers/video/tegra/dc/nvsd.c: In function 'nvsd_phase_in_adjustments':
+drivers/video/tegra/dc/nvsd.c:159: warning: suggest parentheses around comparison in operand of '&'
+drivers/video/tegra/dc/nvsd.c:166: warning: suggest explicit braces to avoid ambiguous 'else'
+drivers/video/tegra/nvmap/nvmap_dev.c: In function 'allocations_stringify':
+drivers/video/tegra/nvmap/nvmap_dev.c:988: warning: format '%8lx' expects type 'long unsigned int', but argument 7 has type 'unsigned int'
+drivers/video/tegra/nvmap/nvmap_dev.c:991: warning: format '%8lx' expects type 'long unsigned int', but argument 7 has type 'unsigned int'
+drivers/video/tegra/fb.c:228: warning: 'tegra_fb_flip_win' defined but not used
+In file included from sound/soc/tegra/tegra_alc5624.c:35:
+include/linux/tegra_audio.h:118: warning: function declaration isn't a prototype
+sound/soc/tegra/tegra_asoc_utils.c: In function 'tegra_asoc_utils_init':
+sound/soc/tegra/tegra_asoc_utils.c:148: warning: unused variable 'rate'
+In file included from sound/soc/tegra/tegra20_das.c:33:
+sound/soc/tegra/tegra20_das.h:101: warning: function declaration isn't a prototype
+sound/soc/tegra/tegra20_das.c:54: warning: function declaration isn't a prototype
+sound/soc/tegra/tegra20_das.c: In function 'tegra20_das_set_tristate':
+sound/soc/tegra/tegra20_das.c:98: warning: control reaches end of non-void function
+In file included from sound/soc/tegra/tegra20_i2s.c:45:
+sound/soc/tegra/tegra20_das.h:101: warning: function declaration isn't a prototype
+net/ipv4/tcp.c: In function 'tcp_nuke_addr':
+include/net/ipv6.h:338: warning: 'in6' may be used uninitialized in this function
+net/ipv4/tcp.c:3357: note: 'in6' was declared here
+In file included from net/ipv4/netfilter/ipt_LOG.c:27:
+include/net/netfilter/xt_log.h: In function 'sb_close':
+include/net/netfilter/xt_log.h:50: warning: value computed is not used
+WARNING: modpost: Found 5 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'

@@ -256,7 +256,7 @@ out:
 EXPORT_SYMBOL_GPL(tps6586x_update);
 
 static struct i2c_client *tps6586x_i2c_client = NULL;
-static void tps6586x_power_off(void)
+int tps6586x_power_off(void)
 {
 	struct device *dev = NULL;
 	int ret = -EINVAL;

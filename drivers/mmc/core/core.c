@@ -788,7 +788,11 @@ int mmc_host_lazy_disable(struct mmc_host *host)
 	if (!host->enabled)
 		return 0;
 
-	if (host->disable_delay) {
+	/* If we have a disable_delay specified, and we are suspended, DO NOT
+  	   schedule disabling. Disable it right now, otherwise, we will end 
+	   acquiring the mmc wakelock, and preventing the device to enter 
+	   suspend mode */
+	if (host->disable_delay && !host->rescan_disable ) {
 		mmc_schedule_delayed_work(&host->disable,
 				msecs_to_jiffies(host->disable_delay));
 		return 0;
@@ -1414,6 +1418,12 @@ void mmc_detach_bus(struct mmc_host *host)
  */
 void mmc_detect_change(struct mmc_host *host, unsigned long delay)
 {
+	/* Avoid detecting mmc changes if suspended. Otherwise, 
+	   we end up holding a wakelock and preventing suspension
+	   of the system ! */
+	if (host->rescan_disable)
+		return;
+		
 #ifdef CONFIG_MMC_DEBUG
 	unsigned long flags;
 	spin_lock_irqsave(&host->lock, flags);

@@ -141,6 +141,9 @@ static inline bool mmc_op_multi(u32 opcode)
 #define R1_URGENT_BKOPS	(1 << 6)	/* sr, a */
 #define R1_APP_CMD		(1 << 5)	/* sr, c */
 
+/*
+ * MMC/SD card state
+ */
 #define R1_STATE_IDLE	0
 #define R1_STATE_READY	1
 #define R1_STATE_IDENT	2
@@ -150,11 +153,6 @@ static inline bool mmc_op_multi(u32 opcode)
 #define R1_STATE_RCV	6
 #define R1_STATE_PRG	7
 #define R1_STATE_DIS	8
-
-/*
- * MMC/SD card state
- */
-#define R1_STATE_PRG		0x7
 
 /*
  * MMC/SD in SPI mode reports R1 status always, and R2 for SEND_STATUS

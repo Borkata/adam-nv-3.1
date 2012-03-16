@@ -338,7 +338,7 @@ static void __init tegra_adam_init(void)
 	adam_power_register_devices();
 	
 	/* Register the USB device */
-	adam_usb_init();
+	adam_usb_register_devices();
 
 	/* Register UART devices */
 	adam_uart_register_devices();

@@ -155,7 +155,7 @@ extern void adam_init_emc(void);
 extern void adam_pinmux_init(void);
 extern void adam_clks_init(void);
 
-extern int adam_usb_init(void);
+extern int adam_usb_register_devices(void);
 extern int adam_audio_register_devices(void);
 extern int adam_jack_register_devices(void);
 extern int adam_gpu_register_devices(void);

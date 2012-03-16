@@ -396,6 +396,11 @@ static int isl29023_chip_init(struct i2c_client *client)
 	return 0;
 }
 
+static const struct iio_info isl29023_info = {
+	.attrs = &isl29108_group,
+	.driver_module = THIS_MODULE,
+};
+
 static int __devinit isl29023_probe(struct i2c_client *client,
 	const struct i2c_device_id *id)
 {
@@ -421,23 +426,23 @@ static int __devinit isl29023_probe(struct i2c_client *client,
 	if (err)
 		goto exit_free;
 
-	chip->indio_dev = iio_allocate_device();
+	chip->indio_dev = iio_allocate_device(0);
 	if (!chip->indio_dev) {
 		dev_err(&client->dev, "iio allocation fails\n");
 		goto exit_free;
 	}
 
-	chip->indio_dev->attrs = &isl29108_group;
+	chip->indio_dev->info = &isl29023_info;
 	chip->indio_dev->dev.parent = &client->dev;
 	chip->indio_dev->dev_data = (void *)(chip);
-	chip->indio_dev->driver_module = THIS_MODULE;
 	chip->indio_dev->modes = INDIO_DIRECT_MODE;
 	err = iio_device_register(chip->indio_dev);
 	if (err) {
 		dev_err(&client->dev, "iio registration fails\n");
 		goto exit_iio_free;
 	}
-
+	
+	dev_dbg(&client->dev, "%s() success\n", __func__);
 	return 0;
 
 exit_iio_free:

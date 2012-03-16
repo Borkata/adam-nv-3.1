@@ -89,7 +89,7 @@
  * PB0 is the 3G W_DISABLE line, PV1 is LED_CHARGE
  * ---
  */
-
+#define ADAM_USB0_VBUS		TEGRA_GPIO_PB0
 
 /* #define ADAM_EMC_SAMSUNG		*/
 /* #define ADAM_EMC_ELPIDA50NM	*/

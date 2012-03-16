@@ -30,6 +30,8 @@ snd-soc-tegra-alc5624-objs := tegra_alc5624.o tegra_generic_codec.o
 snd-soc-tegra-aic326x-objs := tegra_aic326x.o
 snd-soc-tegra-rt5640-objs := tegra_rt5640.o
 snd-soc-tegra-max98095-objs := tegra_max98095.o
+snd-soc-tegra-alc5623-objs := tegra_alc5623.o
+snd-soc-tegra-alc5623-objs := tegra_alc5623.o tegra_generic_codec.o
 
 obj-$(CONFIG_SND_SOC_TEGRA_WM8903) += snd-soc-tegra-wm8903.o
 obj-$(CONFIG_SND_SOC_TEGRA_TRIMSLICE) += snd-soc-tegra-trimslice.o
@@ -39,3 +41,4 @@ obj-$(CONFIG_SND_SOC_TEGRA_ALC5624) += snd-soc-tegra-alc5624.o
 obj-$(CONFIG_SND_SOC_TEGRA_TLV320AIC326X) += snd-soc-tegra-aic326x.o
 obj-$(CONFIG_SND_SOC_TEGRA_RT5640) += snd-soc-tegra-rt5640.o
 obj-$(CONFIG_SND_SOC_TEGRA_MAX98095) += snd-soc-tegra-max98095.o
+obj-$(CONFIG_SND_SOC_TEGRA_ALC5623) += snd-soc-tegra-alc5623.o
